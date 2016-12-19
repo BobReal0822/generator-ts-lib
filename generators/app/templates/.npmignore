@@ -1,0 +1,10 @@
+/src/
+/typings/
+/test/
+
+/build/examples/
+/build/test/
+
+/tsconfig.json
+
+.*

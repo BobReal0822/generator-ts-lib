@@ -1,18 +1,15 @@
 {
-  "name": "*",
+  "name": "ts-lib",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
-  "directories": {
-    "example": "example",
-    "test": "test"
-  },
+  "typings": "build/index.d.ts",
   "scripts": {
-    "test": "npm run test"
+    "build": "tsc",
+    "test": "mocha"
   },
-  "keywords": [
-    "typescript"
-  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  }
 }
