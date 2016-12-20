@@ -2,13 +2,12 @@
   "name": "generator-ts-lib",
   "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "generators/app/index.js",
   "files": [
     "build",
     "router"
   ],
   "scripts": {
-    "test": "npm run test"
   },
   "repository": {
     "type": "git",

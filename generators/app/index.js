@@ -7,7 +7,7 @@ var path = require('path'),
     yeoman = require('yeoman-generator'),
     yosay = require('yosay');
 
-var Reactpackage = yeoman.Base.extend({
+var TsLibPackage = yeoman.Base.extend({
     info: function() {
         this.log(chalk.green(
             'I am going to build your app!'
@@ -43,4 +43,4 @@ var Reactpackage = yeoman.Base.extend({
     }
 });
 
-module.exports = Reactpackage;
+module.exports = TsLibPackage;
