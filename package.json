@@ -1,14 +1,13 @@
 {
   "name": "generator-ts-lib",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "generators/app/index.js",
   "files": [
     "build",
     "router"
   ],
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:ephoton/generator-ts-lib.git"
