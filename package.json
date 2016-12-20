@@ -2,7 +2,7 @@
   "name": "generator-ts-lib",
   "version": "1.0.5",
   "description": "",
-  "main": "generators/app/index.js",
+  "main": "index.js",
   "files": [
     "build",
     "router"
