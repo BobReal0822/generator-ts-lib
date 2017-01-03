@@ -18,8 +18,8 @@ var TsLibPackage = yeoman.Base.extend({
         this.directory('src', 'src');
         this.directory('test', 'test');
         this.copy('package.json', 'package.json');
-        this.copy('.gitignore', '.gitignore');
-        this.copy('.npmignore', '.npmignore');
+        this.copy('_gitignore', '.gitignore');
+        this.copy('_npmignore', '.npmignore');
         this.copy('README.md', 'README.md');
     },
 
