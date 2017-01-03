@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "files": [
-    "build",
-    "router"
+    "generators"
   ],
   "scripts": {},
   "repository": {
