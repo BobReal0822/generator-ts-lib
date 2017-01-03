@@ -16,9 +16,7 @@ var TsLibPackage = yeoman.Base.extend({
 
     generateBasic: function() {
         this.directory('src', 'src');
-        this.directory('build', 'build');
         this.directory('test', 'test');
-        this.directory('example', 'example');
         this.copy('package.json', 'package.json');
         this.copy('.gitignore', '.gitignore');
         this.copy('.npmignore', '.mpmignore');
@@ -30,7 +28,7 @@ var TsLibPackage = yeoman.Base.extend({
         this.destinationPath('./');
     },
 
-    install: function() {      //安装依赖
+    install: function() {
         this.installDependencies({
             skipInstall: this.options['skip-install']
         });
