@@ -5,7 +5,31 @@
 var path = require('path'),
     chalk = require('chalk'),
     yeoman = require('yeoman-generator'),
-    yosay = require('yosay');
+    yosay = require('yosay'),
+    fs = require('fs'),
+    path = require('path'),
+    templatesPath = path.join(__dirname, 'templates');
+
+function copyFilesOfDir(dirPath) {
+    var self = this;
+
+    fs.readdir(dirPath, function(err, files) {
+        if (err) {
+            return;
+        }
+
+        files.map(function (file) {
+            var newPath = path.join(dirPath, file);
+
+            if (fs.lstatSync(newPath).isDirectory()) {
+                self.directory(newPath, file);
+                copyFilesOfDir.call(self, newPath);
+            } else {
+                self.copy(newPath, file);
+            }
+        });
+    });
+}
 
 var TsLibPackage = yeoman.Base.extend({
     info: function() {
@@ -15,16 +39,11 @@ var TsLibPackage = yeoman.Base.extend({
     },
 
     generateBasic: function() {
-        this.directory('src', 'src');
-        this.directory('test', 'test');
-        this.copy('package.json', 'package.json');
-        this.copy('_gitignore', '.gitignore');
-        this.copy('_npmignore', '.npmignore');
-        this.copy('README.md', 'README.md');
+        copyFilesOfDir.call(this, templatesPath);
     },
 
     generateClient: function() {
-        this.sourceRoot(path.join(__dirname, 'templates'));
+        this.sourceRoot(templatesPath);
         this.destinationPath('./');
     },
 
