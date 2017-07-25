@@ -5,7 +5,7 @@
 var path = require('path'),
     chalk = require('chalk'),
     yeoman = require('yeoman-generator'),
-    yosay = require('yosay'),
+    // yosay = require('yosay'),
     fs = require('fs'),
     path = require('path'),
     templatesPath = path.join(__dirname, 'templates');
@@ -23,7 +23,6 @@ function copyFilesOfDir(dirPath) {
 
             if (fs.lstatSync(newPath).isDirectory()) {
                 self.directory(newPath, file);
-                copyFilesOfDir.call(self, newPath);
             } else {
                 self.copy(newPath, file);
             }
@@ -48,14 +47,27 @@ var TsLibPackage = yeoman.Base.extend({
     },
 
     install: function() {
+        var self = this;
+
+        this.log(chalk.green(
+            '\nBegin installing dependencies'
+        ));
         this.installDependencies({
-            skipInstall: this.options['skip-install']
+            npm: true,
+            skipMessage: true,
+            callback: function () {
+                self.log(chalk.green(
+                    'Finish installing dependencies!'
+                ));
+
+                self.end();
+            }
         });
     },
 
     end: function() {
-        this.log(yosay(
-            'Your app has been created successfully!'
+        this.log(chalk.yellow(
+            '\nYour app has been created successfully!\n'
         ));
     }
 });
