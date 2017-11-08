@@ -1,24 +1,16 @@
-generator-ts-lib  [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/generator-ts-lib)
-
-======
-
-An [Yeomen](http://yeoman.io/) generator for [Typescript](https://www.typescriptlang.org/) library.
-
-## Overview
-
-
-## Features
+# generator-ts-lib
+Build JavaScript libraries with TypeScript.
 
 
 ## Installation
 ```bash
-npm install generator-ts-lib -g
+npm install yo ts-lib -g
+mkdir generator-example && cd generator-example && yo ts-lib
+npm run wp
 ```
 
-## Build
-```bash
-yo ts-lib
-```
-
-
-
+### Other recommended generators
+- [generator-gr](https://github.com/ephoton/generator-gr) A generator that generates yeomen generator.
+- [generator-ts-koa](https://github.com/ephoton/generator-ts-koa) Build koa apps with TypeScript.
+- [generator-chrome-extension-tsx](https://github.com/ephoton/generator-chrome-extension-tsx) Build chrome extensions with TypeScript React.
+- [gus-cli](https://github.com/ephoton/gus-cli) An integrated development tool for full-stack engineers that contains some genrators.
