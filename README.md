@@ -4,7 +4,7 @@ Build JavaScript libraries with TypeScript.
 
 ## Installation
 ```bash
-npm install yo ts-lib -g
+npm install yo generator-ts-lib -g
 mkdir generator-example && cd generator-example && yo ts-lib
 npm run wp
 ```
